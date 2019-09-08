@@ -20,6 +20,12 @@ body{
     font-size: xx-large;
     font-family: 'Permanent Marker', cursive;
 }
+
+.narutoTheme{
+  margin-top: 12px;
+  margin-left: 20px;
+}
+
 a{
     margin-left: 20px;
     margin-top: 12px;
