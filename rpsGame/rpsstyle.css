@@ -1,0 +1,22 @@
+body{
+    background-image: url('https://lh5.googleusercontent.com/QIttr4iVT_HWAEi0GJqguDWthfMOYAn8EHZm7EdQGacU3Ce41bptBe0F4EUgJiSK7fvTsD9HrQFXyEQoN6-8vdhsKj5VDlMGxyPMnckJI4TnZGOvK9t2w1traSQ9vYohEhmPr3qI');
+    background-size: cover;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+#game{
+    margin-left: 22px;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.myButtons{
+margin-left: 12px;
+}

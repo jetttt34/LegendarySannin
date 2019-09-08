@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Three Way DeadLock</title>
+  <link rel="stylesheet" href="rpsstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="game">
+    <div>Player Choice: <span id="player-choice"></span></div>
+    <div>Computer Choice: <span id="computer-choice"></span></div>
+    <div>Game results:<span id="outcome"></span></div>
+
+    <div>Wins:<span id="wins"></span></div>
+    <div>Ties:<span id="ties"></span></div>
+    <div>Losses: <span id="losses"></span></div>
+  </div>
+
+<div class="myButtons">
+  <button type="button" onclick="myFunction()">Rock </button>
+  <button type="button" onclick="myFunction()">Paper </button>
+  <button type="button" onclick="myFunction()">Scissors </button>
+</div>
+
+  <script type="text/javascript">
+  alert("Welcome to my Dojo Enter if you dare! ")
+
+    var playerChoice = document.getElementById("player-choice");
+    var computerChoice = document.getElementById("computer-choice");
+    var outcome = document.getElementById("outcome");
+
+    var winsEl = document.getElementById("wins");
+    var tiesEl = document.getElementById("ties");
+    var lossesEl = document.getElementById("losses");
+
+
+
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+    var wins = 0;
+    var ties = 0;
+    var losses = 0;
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+  
+
+      // Determines which key was pressed.
+    var userGuess = event.key.toLowerCase();
+    
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    
+      // Alerts the key the user pressed (userGuess).
+    console.log("User guess: " + userGuess);
+
+      // Alerts the Computer's guess.
+    console.log("Computer guess: " + computerGuess);
+
+    playerChoice.textContent = userGuess;
+    computerChoice.textContent = computerGuess;
+
+    if(userGuess === "r" || userGuess === "p" || userGuess === "s"){
+    }
+    if(userGuess === "r" && computerGuess === "s" || userGuess === "s" && computerGuess === "p" || userGuess === "p" && computerGuess === "r"){
+      wins += 1;
+      console.log("we won!")
+      outcome.textContent = "Victory!! "
+      console.log(wins);
+    }
+    else if(userGuess === computerGuess){
+      ties += 1;
+      console.log("We Tied... ")
+      outcome.textContent = "We Tied . . . "
+      console.log(wins);
+    }
+    else{
+      losses += 1;
+      console.log("We lost :(")
+      outcome.textContent = "You Lose!  "
+      console.log(wins);
+    }
+
+    winsEl.textContent = wins;
+    tiesEl.textContent = ties;
+    lossesEl.textContent = losses;
+
+
+     
+    };
+  </script>
+
+</body>
+
+</html>
+ 
