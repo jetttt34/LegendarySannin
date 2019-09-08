@@ -20,27 +20,33 @@ body{
     font-size: xx-large;
     font-family: 'Permanent Marker', cursive;
 }
-a{
+
+.narutoTheme{
+  margin-top: 12px;
+  margin-left: 20px;
+}
+
+.mybttns{
     margin-left: 20px;
     margin-top: 12px;
 }
 
-a span {
+button span {
     background: #FFF;
     display: block;
     padding: 5px 15px;
     border-radius: 5px;
     border: 2px solid #000;
   }
-  a:hover {
+button:hover {
     box-shadow: 0 2px 0 #000, 0 2px 0px 2px #f03755;
   }
-  a:active {
+  button:active {
     top: 4px;
     padding-bottom: 0px;
     box-shadow: 0 1px 0 #000;
   }
-  a {
+  button {
     position: relative;
     float: left;
     font: normal 22px/25px "Patrick Hand", sans-serif;

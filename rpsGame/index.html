@@ -20,18 +20,27 @@
     <div>Losses: <span id="losses"></span></div>
   </div>
 
-  <div ontouchstart="">
-  
-    <!-- Wireframe 'sketch' buttons -->
-    <a href="#" class="btn"><span>Rock</span></a>
-    <a href="#" class="btn"><span>Paper</span></a>
-    <a href="#" class="btn"><span>Scissors</span></a>
+  <div class="mybttns" ontouchstart="">
+    <button type="button"  name="button1" onclick="" class="btn"> <span>Rock</span> </button>
+    <button type="button"  name="button2" onclick="" class="btn"> <span>Paper</span> </button>
+    <button type="button"  name="button3" onclick="" class="btn"> <span>Scissors</span> </button>
+   <div id="result">
+
+   </div>
   </div>
 
+  <iframe class="narutoTheme" width="440" height="220" src="https://www.youtube.com/embed/7Z9RXPEGtXA?rel=0&border=&autoplay=1" frameborder="0" allowfullscreen></iframe>
+
   <script type="text/javascript">
-  alert("Welcome to my Dojo Enter if you dare! ")
+
+
+  alert("Welcome to my Dojo Enter if you dare! ");
+  
+
+  
 
     var playerChoice = document.getElementById("player-choice");
+    var buttonChoice = document.getElementById("player-choice").onclick;
     var computerChoice = document.getElementById("computer-choice");
     var outcome = document.getElementById("outcome");
 
@@ -53,7 +62,6 @@
 
       // Determines which key was pressed.
     var userGuess = event.key.toLowerCase();
-    
       // Randomly chooses a choice from the options array. This is the Computer's guess.
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
     
@@ -71,19 +79,19 @@
     if(userGuess === "r" && computerGuess === "s" || userGuess === "s" && computerGuess === "p" || userGuess === "p" && computerGuess === "r"){
       wins += 1;
       console.log("we won!")
-      outcome.textContent = "Victory!! "
+      outcome.textContent = " Victory!! "
       console.log(wins);
     }
     else if(userGuess === computerGuess){
       ties += 1;
-      console.log("We Tied... ")
-      outcome.textContent = "We Tied . . . "
+      console.log(" We Tied... ")
+      outcome.textContent = " We Tied . . . "
       console.log(wins);
     }
     else{
       losses += 1;
-      console.log("We lost :(")
-      outcome.textContent = "You Lose!  "
+      console.log(" We lost :(")
+      outcome.textContent = " You Lose!  "
       console.log(wins);
     }
 
@@ -94,7 +102,15 @@
 
      
     };
+
+
+
+
+
   </script>
+
+
+  
 
 </body>
 
